@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
+    </head>
+    <style>
+          h4 {
+               margin-top: 5px;
+               padding-top: 20px;
+               font-family: 'Lucida Sans';
+               font-size: medium;
+             }
+         h1 {
+                margin-top: 0px;
+                padding-top: 20px;
+                font-weight: 700;
+                font-family: 'sans-serif';
+                font-size: 60px;
+              }  
+         h2 {
+            font-weight: 700;
+            }
+         h5 {
+              font-weight: 700;
+              font-size:25px
+            }   
+    </style>
+    <body>
+        <div class="row">
+            <div class="sidebar col-lg-2 col-md-3">
+                <h2>Wiki</h2>
+                <form>
+                    <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+                </form>
+                <div>
+                    <a href="{% url 'index' %}">Home</a>
+                </div>
+                <div>
+                    <a href="{% url 'newEntry' %}">Create New Page</a>
+                </div>
+                <div>
+                    <a href="{% url 'random' %}">Random Page</a>
+                </div>
+                {% block nav %}
+                {% endblock %}
+            </div>
+            <div class="main col-lg-10 col-md-9">
+                {% block body %}
+                <br>
+                <h1>"{{ entryTitle }}" not found in Wiki.</h1>
+                <br>
+                <h2>An error has occured...</h2>
+                <h5>This page does not exist! There's no entry matching found, want to help and create one?</h5> 
+                <br>
+                <div>
+                    <h4 >Please click <a href="{% url 'newEntry' %}">here</a> if you want to help.<br><br><br><br> Go back <a href="{% url 'index' %}">home</h4>
+                </div>      
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
