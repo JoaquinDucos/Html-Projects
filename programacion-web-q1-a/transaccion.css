@@ -1,0 +1,286 @@
+body {
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  #btnMenu {
+    padding: 5px 5px 5px 5px;
+    margin-right: 8px;
+    margin-left: 9px;
+    opacity: 1; 
+    position: relative;
+    z-index: 99;
+    border: none;
+    background-color:none;
+    width: 25px;
+    background-image: none;
+  }
+  
+  #btnMenu:hover{
+    opacity: 1;
+    transition: opacity 2s ease-in-out; 
+    transform: translateY(-4px); 
+  }
+
+.espaciado{
+    margin-top: 80px;
+    padding-top: 10px;
+}
+
+.mensaje{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  
+  :root {
+    --facebook: #3b5999;
+    --instagram: #e4405f;
+    --whatsapp: #25d366;
+    --twitter: #0ec6ef; 
+  }
+  
+  .footer-conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-conteiner ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+  
+  .footer-conteiner ul li a {
+    display: block;
+    padding: 0 10px;
+    background: #333;
+    color: #FAFAFA;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 25px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
+    transition: .2s;
+  }
+  
+  .footer-conteiner ul:hover a {
+    filter: blur(2px);
+  }
+  
+  .footer-conteiner ul li a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .4);
+    filter: none;
+  }
+  
+  .footer-conteiner ul li .facebook:hover {
+    background: var(--facebook);
+  }
+  
+  .footer-conteiner ul li .instagram:hover {
+    background: var(--instagram);
+  }
+  
+  .footer-conteiner ul li .whatsapp:hover {
+    background: var(--whatsapp);
+  }
+  
+  .footer-conteiner ul li .twitter:hover {
+    background: var(--twitter);
+  }
+  
+
+
+section#checkout {
+  margin-top: 5px;
+}
+
+section#checkout .form-group label {
+  font-weight: bold;
+}
+
+section#checkout .form-control {
+  border-radius: 0;
+}
+
+section#checkout .btn-primary {
+  width: 100%;
+}
+
+.invalid-feedback {
+  display: none;
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.invalid-feedback.show {
+  display: block;
+}
+#payment-form .form-group {
+  position: relative;
+}
+
+#payment-form .form-group i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #28a745;
+}
+
+#payment-form .form-control.is-valid {
+  border-color: #28a745;
+}
+
+#payment-form .form-control.is-valid + i.fa-check-circle {
+  display: block;
+}
+
+#payment-form .form-control.is-valid + i.fa-check-circle,
+#payment-form .form-control.is-valid + i.fa-check-circle + .invalid-feedback {
+  display: none;
+}
+
+#payment-form .form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+#payment-form .form-control.is-invalid + i.fa-times-circle {
+  display: block;
+}
+
+#payment-form .form-control.is-invalid + i.fa-times-circle,
+#payment-form .form-control.is-invalid + i.fa-times-circle + .invalid-feedback {
+  display: none;
+}
+.valid-feedback-icon,
+.invalid-feedback-icon {
+  display: none;
+}
+
+.form-control.is-valid + .valid-feedback .valid-feedback-icon {
+  display: inline-block;
+  color: #28a745;
+}
+
+.form-control.is-invalid + .invalid-feedback .invalid-feedback-icon {
+  display: inline-block;
+  color: #dc3545;
+}
+#btnCuenta {
+  font-size: 1.9em;
+  padding: 5px 5px 5px 5px;
+  margin-right: 8px;
+  opacity: 1; 
+  position: relative;
+  z-index: 5;
+  border-radius: 12px;
+  border: none;
+  background-color:none;
+  width: 35px;
+  background-image: none;
+}
+
+#btnCuenta:hover{
+  opacity: 1;
+  transition: opacity 2s ease-in-out; 
+  transform: translateY(-4px); 
+}
+.logoChain {
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  position: sticky;
+}
+
+.logoChain img {
+  max-width: 100%;
+  width: 420px;
+  height: auto;
+  margin-left: 4px;
+  border-radius: 10px;
+}
+
+.delete-icon {
+  position: absolute;
+  background-image: url(./img/delete-icon.png);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-size: cover;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+ 
+} 
+.delete-icon:hover{
+    opacity: 1;
+    transition: opacity 2s ease-in-out; 
+    transform: translateY(-4px); 
+}
+  #selected-plan-container {
+    position: relative;
+    z-index: 1;
+  }
+
+
+  #checkout .form-group {
+    margin-bottom: 20px;
+  }
+  
+  #checkout .btn-primary {
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  #checkout .btn-primary:hover {
+    background-color: #0069d9;
+  }
+  
+  #checkout .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  
+  #checkout #error-message,
+  #checkout #success-message {
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+  }
+  
+  #checkout #error-message {
+    color: #dc3545;
+    opacity: 0;
+  }
+  
+  #checkout #success-message {
+    color: #28a745;
+    opacity: 0;
+  }
+  
+  #checkout #error-message.show,
+  #checkout #success-message.show {
+    opacity: 1;
+  }
+  

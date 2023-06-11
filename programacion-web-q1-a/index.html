@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Chain Blocc</title>
+</head>
+<header>
+<nav class="navbar bg-body-tertiary fixed-top">
+
+  <div class="container-fluid">
+
+    <div class="logoChain">
+      <a class="navbar-brand" href="index.html"><img src="./img/chainblocc-logo.png" alt="Chainblocc Logo"></a>
+    </div>
+
+    <div class="navbar-left ms-auto d-flex align-items-center">
+      <a href="sesion.html"><img src="./img/Cuenta.png" id="btnCuenta" alt="Icono cuenta"></a>
+      <a href="suscripciones.html"><img src="./img/cart.png" id="btnCuenta" alt="Icono shop cart"></a>
+      <a href="transaccion.html"><img src="./img/Tarjeta.png" id="btnCuenta" alt="Icono transaccion"></a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" id="btnMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Home</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+    
+
+    </li>  
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="suscripciones.html">Subscriptions</a>
+            <a class="nav-link active" aria-current="page" href="sesion.html">Login</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Shop Cart
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+            <section id="selected-plan-section" class="container py-5 mensaje">
+              <div id="selected-plan-container">
+             
+                <div id="selected-plan-info" class="selected-plan">
+                  <h3 id="plan-name"></h3>
+                  <div class="plan-details">
+                    <p>Price: <span id="plan-price"></span></p>
+                  </div>
+                  <div>
+                    <a id="delete-plan-icon" class="delete-icon" href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div id="no-plan-selected" style="display: none;">
+                <p>You haven't chosen any plans. Would you like to choose one now?</p>
+                <a href="suscripciones.html"><button id="choose-plan-button" class="btn btn-primary">Choose Plan</button></a>
+              </div>
+              </li>
+            </ul>
+            </section>
+
+          </li>   
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+<body>
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel">
+            <img src="./img/cadenainfinito.jpg" alt="Cadena Infinito">
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+<div class="center">
+  <a href="index.html#available"><img src="./img/flecha_icono-removebg-preview.png" id="buttonCarousel" alt="Arrow"></a>
+  <p id="available"></p>
+</div>   
+
+<div class="container-espacioDiv">
+    <div class="row">
+      <div>
+        <h1>Available Services</h1>
+      </div>
+    </div>
+  </div>
+
+<section id="producto">
+    <div class="card-container" style="width: 18rem; ">
+      <img src="https://www.boydcorp.com/images/industries/Cloud-Main-Image.jpg" class="card-img-top" alt="Product 1" >
+      <div class="card-body">
+        <h5 class="card-title">Big Data Center</h5>
+        <p class="card-text">How we work and store information.</p>
+        <a href="#" class="btn btn-primary">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://social-hire.com/uploads/62359-Cloud-Based-CRM.jpg" class="card-img-top" alt="product 2">
+      <div class="card-body">
+        <h5 class="card-title">Cloud Computing <br>Software</h5>
+        <p class="card-text">How we connect store data through our software.</p>
+        <a href="#" class="btn btn-primary">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://media.licdn.com/dms/image/C5612AQGthZs00xPX2g/article-cover_image-shrink_720_1280/0/1634809398232?e=2147483647&v=beta&t=d3whNF7CWbEuEzGUb_OxOHSR_erMptPgAoDcdyKuiVw" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Decentralized Cloud</h5>
+        <p class="card-text">Noding benefits in security,<br> data storage and long term sustainability.</p>
+        <a href="#" class="btn btn-primary">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://uploads-ssl.webflow.com/5e39239f2e417c1a357f71f5/607eaf032f4fb2423349faf9_smart-contracts-security-for-pentesters.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Blockchain & Cloud</h5>
+        <p class="card-text">Security and transparency.</p>
+        <a href="#" class="btn btn-primary">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://images.pexels.com/photos/7887821/pexels-photo-7887821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AI-powered analytics</h5>
+        <p class="card-text">Get insights into your data with our AI-powered analytics.</p>
+        <a href="#" class="btn btn-primary">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://media.istockphoto.com/id/1195696110/es/foto/manos-usando-pagos-m%C3%B3viles-marketing-digital-red-bancaria-compras-en-l%C3%ADnea-y-conexi%C3%B3n-de-red.jpg?s=612x612&w=0&k=20&c=vwJytdCIZgR5XPLG7YrJUzJwHkLEHLhVuGUAYsjf08o=" class="card-img-top" alt="Mobile App Development">
+      <div class="card-body">
+        <h5 class="card-title">Mobile app development</h5>
+        <p class="card-text">Let us build a mobile app for your business.</p>
+        <a href="#" class="btn btn-primary">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://images.pexels.com/photos/4126724/pexels-photo-4126724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Web App Development">
+      <div class="card-body">
+        <h5 class="card-title">Web development</h5>
+        <p class="card-text">We can build a website for your business.</p>
+        <a href="#" class="btn btn-primary">More information</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container container-espacioDiv">
+  
+    <div class="row">
+      <div>
+        <h1>Additional Services</h1>
+      </div>
+    </div>
+    
+  </div>
+  <div class="center2">
+    <a href="index.html#additional"><img src="./img/flecha_icono-removebg-preview.png" id="buttonCarousel" alt="Arrow"></a>
+    <p id="additional"></p>
+  </div>
+
+  <section id="pre-servicio" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="service-item">
+            <i class="fas fa-laptop-code"></i>
+            <h2 class="service-title">Web Development</h2>
+            <p class="service-description">We offer professional web development services to help businesses establish an online presence.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-item">
+            <i class="fas fa-mobile-alt"></i>
+            <h2 class="service-title">Mobile App Development</h2>
+            <p class="service-description">Our team specializes in creating mobile applications that are intuitive, user-friendly, and visually appealing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container container-espacioDiv">
+  
+    <div class="row">
+      <div>
+        <h1>Our Business</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="center2">
+    <a href="index.html#services"><img src="./img/flecha_icono-removebg-preview.png" id="buttonCarousel" alt="Arrow"></a>
+    <p id="services"></p>
+  </div>
+
+  <section id="servicio" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center mb-5">
+          <h1 class="section-title">What does ChainBlocc offer?</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="service-item">
+            <h2 class="service-title">Cloud Computing</h2>
+            <p>We offer a wide range of cloud computing services, including:</p>
+            <ul class="service-list">
+              <li>Data storage</li>
+              <li>Backup and recovery</li>
+              <li>Application hosting</li>
+              <li>Web hosting</li>
+              <li>Email hosting</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-item">
+            <h2 class="service-title">Blockchain</h2>
+            <p>We offer a variety of blockchain services, including:</p>
+            <ul class="service-list">
+              <li>Blockchain development</li>
+              <li>Blockchain consulting</li>
+              <li>Blockchain security</li>
+              <li>Blockchain training</li>
+              <li>Blockchain research</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>  
+  
+  <div class="testimonial">
+    <blockquote>
+      <p>"This is exactly what my business was looking for, great company, great services,  but even greater people!"</p>
+      <cite> John Doe (Classic John Doe)</cite>
+    </blockquote>
+  </div>
+
+  <div class="container container-espacioDiv">
+  
+    <div class="row">
+      <div>
+        <h1>Get to known us better</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="center2">
+    <a href="index.html#contact"><img src="./img/flecha_icono-removebg-preview.png" id="buttonCarousel" alt="Arrow"></a>
+    <p id="contact"></p>
+  </div>
+
+  <section id="contacto">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Contact Us</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Leave a Message</h2>
+          <form action="#">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+  window.__lc = window.__lc || {};
+  window.__lc.license = 15501666;
+  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechat.com/chat-with/15501666/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+
+
+<script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/20dbc68d3e.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="transaction.js"></script>
+</body>
+
+<footer class="bg-dark text-white">
+    
+        <div class="container p-4">
+          <div class="row row1">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">About us</h5>
+        
+            <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">About</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Team</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Blog</a>
+            </li>
+            </ul>
+          </div>
+        
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Services</h5>
+        
+            <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Shared Nodes</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Cloud Storage</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Cloud Security</a>
+            </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mb-3 mb-lg-0">
+            <h5 class="fw-bold mb-3">Contact</h5>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (123) 456-7890</li>
+              <li class="mb-2"><i class="fas fa-envelope me-2"></i> customerservice@chainblocc.com</li>
+              <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> San Martin 202, Buenos Aires, Argentina</li>
+            </ul>
+          </div>
+          <div class="footer col-lg-3">
+            <div class="footer-conteiner">
+              <ul>
+                  <li><a href="https://www.instagram.com" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                  <li><a href="https://web.twitter.com/" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a></li>
+              </ul>
+            </div>
+        </div>   
+        
+      <div class="d-flex justify-content-between mt-4 pt-4 border-top">
+        <p class="small">&copy; 2023 Chain Blocc. All rights reserved.</p>
+        <p class="small">Developed by <a href="www.github.com/JoaquinDucos" class="text-white">Joaquin Ducos</a></p>
+      </div>
+    
+  </footer>
+
+</html> 
