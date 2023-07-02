@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Chain Blocc</title>
+</head>
+
+<header>
+<nav class="navbar bg-body-tertiary fixed-top">
+
+  <div class="container-fluid">
+
+    <div class="logoChain">
+      <a class="navbar-brand" href="index.html"><img src="./img/chainblocc-logo.png" alt="Chainblocc Logo"></a>
+    </div>
+
+    <div class="navbar-left ms-auto d-flex align-items-center">
+      <a href="sesion.html"><img src="./img/Cuenta.png" id="btnCuenta" alt="Icono cuenta"></a>
+      <a href="suscripciones.html"><img src="./img/cart.png" id="btnCuenta" alt="Icono shop cart"></a>
+      <a href="transaccion.html"><img src="./img/Tarjeta.png" id="btnCuenta" alt="Icono transaccion"></a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" id="btnMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Home</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+    
+
+    </li>  
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="suscripciones.html">Subscriptions</a>
+            <a class="nav-link active" aria-current="page" href="sesion.html">Login</a>
+            <a href="#" class="nav-link active" onclick="showPopup('popup_aboutUs')">About Us</a>
+            <a href="#" class="nav-link active" onclick="showPopup('popup_team')">Team</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Shop Cart
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+            <section id="selected-plan-section" class="container py-5 mensaje">
+              <div id="selected-plan-container">
+             
+                <div id="selected-plan-info" class="selected-plan">
+                  <h3 id="plan-name"></h3>
+                  <div class="plan-details">
+                    <p>Price: <span id="plan-price"></span></p>
+                  </div>
+                  <div>
+                    <a id="delete-plan-icon" class="delete-icon" href="#"></a>
+                  </div>
+                </div>
+              </div>
+              <div id="no-plan-selected" style="display: none;">
+                <p>You haven't chosen any plans. Would you like to choose one now?</p>
+                <a href="suscripciones.html"><button id="choose-plan-button" class="btn btn-primary">Choose Plan</button></a>
+              </div>
+              </li>
+            </ul>
+            </section>
+
+          </li>   
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+<body>
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel">
+            <img src="./img/cadenainfinito.jpg" alt="Cadena Infinito">
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+<div class="center">
+  <a href="index.html#available"><img src="./img/flecha_icono-removebg-preview.png" id="buttonCarousel" alt="Arrow"></a>
+  <p id="available"></p>
+</div>   
+
+<div class="container-espacioDiv">
+    <div class="row">
+      <div>
+        <h1>Available Services</h1>
+      </div>
+    </div>
+  </div>
+
+<section id="producto">
+    <div class="card-container" style="width: 18rem; ">
+      <img src="https://www.boydcorp.com/images/industries/Cloud-Main-Image.jpg" class="card-img-top" alt="Product 1" >
+      <div class="card-body">
+        <h5 class="card-title">Big Data Center</h5>
+        <p class="card-text text">How we work and store information.</p>
+        <a href="#" class="btn btn-primary" onclick="showPopup('popup1')" >More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://social-hire.com/uploads/62359-Cloud-Based-CRM.jpg" class="card-img-top" alt="product 2">
+      <div class="card-body">
+        <h5 class="card-title">Cloud Computing <br>Software</h5>
+        <p class="card-text text">How we connect store data through our software.</p>
+        <a href="#" class="btn btn-primary" onclick="showPopup('popup2')">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://media.licdn.com/dms/image/C5612AQGthZs00xPX2g/article-cover_image-shrink_720_1280/0/1634809398232?e=2147483647&v=beta&t=d3whNF7CWbEuEzGUb_OxOHSR_erMptPgAoDcdyKuiVw" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Decentralized Cloud</h5>
+        <p class="card-text text">Noding benefits in security,<br> data storage and long term sustainability.</p>
+        <a href="#" class="btn btn-primary" onclick="showPopup('popup3')">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://uploads-ssl.webflow.com/5e39239f2e417c1a357f71f5/607eaf032f4fb2423349faf9_smart-contracts-security-for-pentesters.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Blockchain & Cloud</h5>
+        <p class="card-text text">Security and transparency.</p>
+        <a href="#" class="btn btn-primary" onclick="showPopup('popup4')">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://images.pexels.com/photos/7887821/pexels-photo-7887821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">AI-powered analytics</h5>
+        <p class="card-text text">Get insights into your data with our AI-powered analytics.</p>
+        <a href="#" class="btn btn-primary" onclick="showPopup('popup5')">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://media.istockphoto.com/id/1195696110/es/foto/manos-usando-pagos-m%C3%B3viles-marketing-digital-red-bancaria-compras-en-l%C3%ADnea-y-conexi%C3%B3n-de-red.jpg?s=612x612&w=0&k=20&c=vwJytdCIZgR5XPLG7YrJUzJwHkLEHLhVuGUAYsjf08o=" class="card-img-top" alt="Mobile App Development">
+      <div class="card-body">
+        <h5 class="card-title">Mobile app development</h5>
+        <p class="card-text text">Let us build a mobile app for your business.</p>
+        <a href="#" class="btn btn-primary" onclick="showPopup('popup6')">More information</a>
+      </div>
+    </div>
+
+    <div class="card-container" style="width: 18rem;">
+      <img src="https://images.pexels.com/photos/4126724/pexels-photo-4126724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Web App Development">
+      <div class="card-body">
+        <h5 class="card-title">Web development</h5>
+        <p class="card-text text">We can build a website for your business.</p>
+        <a href="#" class="btn btn-primary" onclick="showPopup('popup7')">More information</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divs de los pop ups que figuran ocultos hasta que se haga click-->
+
+  <div id="popup1" class="popup-container">
+    <div class="popup-content">
+        <h1 class="popup-title">Big Data</h1>
+        <h2>How we work and store information</h2>
+      <p class="popup-text">In the era of digitalization, data has become a precious commodity. Big Data refers to the massive volumes of structured and unstructured data that organizations collect on a daily basis. The challenge lies not just in storing this data but also in analyzing it to gain valuable insights. At our company, we specialize in handling Big Data effectively. Our experts use advanced analytics tools and technologies to process, manage, and derive meaningful patterns from the vast amount of information. By harnessing the power of Big Data, we help businesses make data-driven decisions and stay ahead in the competitive landscape.</p>
+      <button class="btn-close" onclick="hidePopup('popup1')"></button>   
+     </div>
+  </div>
+
+  <div id="popup2" class="popup-container">
+    <div class="popup-content">
+        <h1 class="popup-title">Cloud Computing</h1>
+        <h2>How we connect and store data through our software</h2>
+      <p class="popup-text">Cloud Computing has revolutionized the way businesses operate and store their data. Rather than relying on traditional on-premises servers, cloud technology offers flexible and scalable solutions. Our software solutions are built on the cloud, ensuring seamless access to your data from anywhere, anytime. Whether you need to collaborate with your team, store critical files securely, or run resource-intensive applications, our cloud-based approach guarantees reliability, cost-effectiveness, and enhanced productivity.</p>
+      <button class="btn-close" onclick="hidePopup('popup2')"></button>   
+     </div>
+  </div>
+
+  <div id="popup3" class="popup-container">
+    <div class="popup-content">
+        <h1 class="popup-title">Decentralized Cloud</h1>
+        <h2>Noding benefits in security, data storage, and long-term sustainability</h2>
+      <p class="popup-text">The future of cloud computing lies in decentralization, and our services reflect this vision. Decentralized Cloud removes the dependency on a single central authority, ensuring enhanced security and data privacy. By distributing data across a network of nodes, we ensure data redundancy, reducing the risk of data loss. Moreover, decentralized cloud solutions contribute to long-term sustainability by optimizing resource usage and reducing energy consumption. Embrace the decentralized cloud to safeguard your data and experience an eco-friendly approach to cloud computing.</p>
+      <button class="btn-close" onclick="hidePopup('popup3')"></button>   
+     </div>
+  </div>
+
+  <div id="popup4" class="popup-container">
+    <div class="popup-content">
+        <h1 class="popup-title">Blockchain & Cloud</h1>
+        <h2>Security and transparency combined</h2>
+      <p class="popup-text">Blockchain technology is synonymous with security and transparency, and we've integrated it with our cloud services. By leveraging blockchain's immutable and decentralized nature, we ensure that your data remains tamper-proof and verifiable. Each transaction and interaction with your data is recorded on the blockchain, providing an audit trail of all activities. This innovative fusion of cloud and blockchain technology enhances the trustworthiness of your data, making it ideal for applications that require utmost security and transparency.</p>
+      <button class="btn-close" onclick="hidePopup('popup4')"></button>   
+     </div>
+  </div>
+
+  <div id="popup5" class="popup-container">
+    <div class="popup-content">
+        <h1 class="popup-title">AI-powered analytics</h1>
+        <h2>Get insights into your data with our AI-powered analytics</h2>
+      <p class="popup-text">Data becomes valuable when it's transformed into actionable insights. Our AI-powered analytics solutions offer advanced data processing and predictive analysis capabilities. By using machine learning algorithms, we uncover hidden patterns and trends within your data, enabling you to make informed decisions. Whether it's customer behavior analysis, market forecasting, or optimizing business processes, our AI-driven approach empowers you to stay competitive and capitalize on opportunities.</p>
+      <button class="btn-close" onclick="hidePopup('popup5')"></button>   
+     </div>
+  </div>
+
+  <div id="popup6" class="popup-container">
+    <div class="popup-content">
+        <h1 class="popup-title">Mobile app development</h1>
+        <h2>Let us build a mobile app for your business</h2>
+      <p class="popup-text">In today's mobile-centric world, having a mobile app for your business is essential. Our mobile app development services cater to a diverse range of industries and requirements. From user-friendly interfaces to seamless performance, our team of skilled developers ensures that your app delivers a top-notch user experience. We tailor the app to your specific needs, whether it's an e-commerce platform, a productivity tool, or a customer engagement application. Let us bring your app idea to life and expand your reach to the ever-growing mobile audience.</p>
+      <button class="btn-close" onclick="hidePopup('popup6')"></button>   
+     </div>
+  </div>
+
+    <div id="popup7" class="popup-container">
+      <div class="popup-content">
+          <h1 class="popup-title">Web development</h1>
+          <h2>We can build a website for your business</h2>
+        <p class="popup-text">A well-designed website is the digital face of your business. Our web development services focus on creating captivating, responsive, and user-friendly websites that reflect your brand's identity. Whether you need a simple informational site or a complex e-commerce platform, our web development team has the expertise to deliver exceptional results. With a strong emphasis on aesthetics, functionality, and SEO optimization, we ensure that your website attracts visitors, engages them effectively, and drives meaningful conversions. Trust us to build a website that elevates your online presence and drives business growth.</p>
+        <button class="btn-close" onclick="hidePopup('popup7')"></button>   
+       </div>
+    </div>
+    <div id="popup_aboutUs" class="popup-container">
+      <div class="popup-content">
+          <h1 class="popup-title">About Us</h1>
+          <h2>What do we do?</h2>
+        <p class="popup-text">Welcome to our cutting-edge DeFi and Blockchain Cloud Service. We prioritize security and sustainability, revolutionizing cloud technology. <br> By combining DeFi principles and blockchain, we ensure data integrity and transparency. Our platform utilizes advanced encryption and authentication methods to protect your information. Moreover, our decentralized approach optimizes resource usage, reducing energy consumption for a greener future. Experience the best of both worlds - security and sustainability - with our personalized support and scalable solutions. Join us in redefining cloud technology for a secure and eco-friendly digital future.</p>
+        <button class="btn-close" onclick="hidePopup('popup_aboutUs')"></button>   
+       </div>
+    </div>
+    <div id="popup_team" class="popup-container">
+      <div class="popup-content">
+          <h1 class="popup-title">Team</h1>
+          <h2>Member/s</h2>
+          <img src="./img/JDucos_foto_cv.jpeg" alt="Team Member Joaquín Ducos">
+        <p class="popup-text">Meet Joaquín Ducos, our exceptional Team member! <br> A Business Management & Technology student with a flair for programming. Joaquín's dedication shines through his web development and server management skills. With his passion for innovation, he ensures we stay ahead in the digital realm. Join us in celebrating Joaquín's talents as he enhances our mission to deliver exceptional results for our clients.</p>
+        <button class="btn-close" onclick="hidePopup('popup_team')"></button>   
+       </div>
+    </div>
+    
+    <div id="popup_blog" class="popup-container">
+      <div class="popup-content">
+          <h1 class="popup-title">BLOG</h1>
+          <h2>Soon...</h2>
+        <p class="popup-text">...</p>
+        <button class="btn-close" onclick="hidePopup('popup_blog')"></button>   
+       </div>
+    </div>
+    
+  <div class="overlay" id="overlay" onclick="hidePopup('popup1')"></div>
+  <div class="overlay" id="overlay" onclick="hidePopup('popup2')"></div>
+  <div class="overlay" id="overlay" onclick="hidePopup('popup3')"></div>
+  <div class="overlay" id="overlay" onclick="hidePopup('popup4')"></div>
+  <div class="overlay" id="overlay" onclick="hidePopup('popup5')"></div>
+  <div class="overlay" id="overlay" onclick="hidePopup('popup6')"></div>
+  <div class="overlay" id="overlay" onclick="hidePopup('popup7')"></div>
+  <div class="overlay" id="overlay" onclick="hidePopup('popup_aboutUs')"></div>
+  <div class="overlay" id="overlay" onclick="hidePopup('popup_team')"></div>
+  <div class="overlay" id="overlay" onclick="hidePopup('popup_blog')"></div>
+
+  <div class="container container-espacioDiv">
+  
+    <div class="row">
+      <div>
+        <h1>Additional Services</h1>
+      </div>
+    </div>
+    
+  </div>
+  <div class="center2">
+    <a href="index.html#additional"><img src="./img/flecha_icono-removebg-preview.png" id="buttonCarousel" alt="Arrow"></a>
+    <p id="additional"></p>
+  </div>
+
+  <section id="pre-servicio" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="service-item">
+            <i class="fas fa-laptop-code"></i>
+            <h2 class="service-title">Web Development</h2>
+            <p class="service-description">We offer professional web development services to help businesses establish an online presence.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-item">
+            <i class="fas fa-mobile-alt"></i>
+            <h2 class="service-title">Mobile App Development</h2>
+            <p class="service-description">Our team specializes in creating mobile applications that are intuitive, user-friendly, and visually appealing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container container-espacioDiv">
+  
+    <div class="row">
+      <div>
+        <h1>Our Business</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="center2">
+    <a href="index.html#services"><img src="./img/flecha_icono-removebg-preview.png" id="buttonCarousel" alt="Arrow"></a>
+    <p id="services"></p>
+  </div>
+
+  <section id="servicio" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center mb-5">
+          <h1 class="section-title">What does ChainBlocc offer?</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="service-item">
+            <h2 class="service-title">Cloud Computing</h2>
+            <p>We offer a wide range of cloud computing services, including:</p>
+            <ul class="service-list">
+              <li>Data storage</li>
+              <li>Backup and recovery</li>
+              <li>Application hosting</li>
+              <li>Web hosting</li>
+              <li>Email hosting</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-item">
+            <h2 class="service-title">Blockchain</h2>
+            <p>We offer a variety of blockchain services, including:</p>
+            <ul class="service-list">
+              <li>Blockchain development</li>
+              <li>Blockchain consulting</li>
+              <li>Blockchain security</li>
+              <li>Blockchain training</li>
+              <li>Blockchain research</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>  
+  
+  <div class="testimonial">
+    <blockquote>
+      <p>"This is exactly what my business was looking for, great company, great services,  but even greater people!"</p>
+      <cite style="font-style: italic;"> John Doe</cite>
+    </blockquote>
+  </div>
+
+  <div class="container container-espacioDiv">
+  
+    <div class="row">
+      <div>
+        <h1>Get to known us better</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="center2">
+    <a href="index.html#contact"><img src="./img/flecha_icono-removebg-preview.png" id="buttonCarousel" alt="Arrow"></a>
+    <p id="contact"></p>
+  </div>
+
+  <section id="contacto">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Contact Us</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Leave a Message</h2>
+          <form action="#">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+  window.__lc = window.__lc || {};
+  window.__lc.license = 15501666;
+  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechat.com/chat-with/15501666/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+
+<script src="./scripts.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/20dbc68d3e.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="transaction.js"></script>
+</body>
+
+<footer class="bg-dark text-white">
+    
+        <div class="container p-4">
+          <div class="row row1">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">About us</h5>
+        
+            <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white" onclick="showPopup('popup_aboutUs')">About</a>
+              
+            </li>
+            <li>
+              <a href="#!" class="text-white" onclick="showPopup('popup_team')">Team</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white" onclick="showPopup('popup_blog')">Blog</a>
+            </li>
+            </ul>
+          </div>
+        
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Services</h5>
+        
+            <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white"  onclick="showPopup('popup3')">Shared Nodes</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"  onclick="showPopup('popup2')">Cloud Storage</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"  onclick="showPopup('popup4')">Cloud Security</a>
+            </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mb-3 mb-lg-0">
+            <h5 class="fw-bold mb-3">Contact</h5>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (123) 456-7890</li>
+              <li class="mb-2"><i class="fas fa-envelope me-2"></i> customerservice@chainblocc.com</li>
+              <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> San Martin 202, Buenos Aires, Argentina</li>
+            </ul>
+          </div>
+          <div class="footer col-lg-3">
+            <div class="footer-conteiner">
+              <ul>
+                  <li><a href="https://www.instagram.com" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="https://web.whatsapp.com/" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                  <li><a href="https://web.twitter.com/" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>   
+        
+      <div class="d-flex justify-content-between mt-4 pt-4 border-top">
+        <p class="small">&copy; 2023 Chain Blocc. All rights reserved.</p>
+        <p class="small">Developed by <a href="https://www.github.com/JoaquinDucos" target="_blank" class="text-white">Joaquin Ducos</a></p>
+      </div>
+    
+  </footer>
+
+</html> 

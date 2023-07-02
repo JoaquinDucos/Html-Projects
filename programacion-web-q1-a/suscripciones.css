@@ -1,0 +1,442 @@
+.logoChain {
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  position: sticky;
+}
+
+.logoChain img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  margin-left: 4px;
+  border-radius: 10px;
+}
+
+  header{
+    margin-bottom: 6em;
+    background-color: rgb(237, 235, 246);
+    color: rgb(237, 235, 246);
+    border-bottom: 1px;
+  }
+
+  body {
+    background-color: rgb(194, 194, 194);
+    position: relative;
+  }
+
+  .container {
+    margin-bottom: 10px;
+  }
+
+#suscripciones {
+  float: left;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(194, 194, 194);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#suscripciones img {
+  border-radius: 20px;
+  max-width: 100%;
+  object-fit: contain;
+  max-height: 520px;
+}
+  
+#suscripciones div{
+    font-family: sans-serif;
+    margin: 0.3em;
+    width: 100%;
+    padding: 10px;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding-top: 15px;
+  margin-top: 10px;
+  padding-left: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+:root {
+  --facebook: #3b5999;
+  --instagram: #e4405f;
+  --whatsapp: #25d366;
+  --twitter: #0ec6ef; 
+}
+
+.footer-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-conteiner ul li {
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.footer-conteiner ul li a {
+  display: block;
+  padding: 0 10px;
+  background: #333;
+  color: #FAFAFA;
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 25px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
+  transition: .2s;
+}
+
+.footer-conteiner ul:hover a {
+  filter: blur(2px);
+}
+
+.footer-conteiner ul li a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .4);
+  filter: none;
+}
+
+.footer-conteiner ul li .facebook:hover {
+  background: var(--facebook);
+}
+
+.footer-conteiner ul li .instagram:hover {
+  background: var(--instagram);
+}
+
+.footer-conteiner ul li .whatsapp:hover {
+  background: var(--whatsapp);
+}
+
+.footer-conteiner ul li .twitter:hover {
+  background: var(--twitter);
+}
+
+footer h5 {
+  font-size: 16px;
+  color: #c7cacb;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.row1 {
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  justify-content: center;
+}
+
+.row {
+  margin-top: 5px;
+  justify-content: center;
+}
+
+footer a {
+  font-size: 14px;
+  color: #929395;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #343a40;
+}
+
+footer .container {
+  flex-grow: 1;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#btnCuenta {
+  font-size: 1.9em;
+  padding: 5px 5px 5px 5px;
+  margin-right: 8px;
+  opacity: 1; 
+  position: relative;
+  z-index: 99;
+  border-radius: 12px;
+  border: none;
+  background-color:none;
+  width: 35px;
+  background-image: none;
+}
+#btnCuenta:hover{
+  opacity: 1;
+  transition: opacity 2s ease-in-out; 
+  transform: translateY(-4px); 
+}
+
+.carousel div {
+  padding-top:50px ;
+}
+.container-espacioDiv{
+  background-color:  rgb(194, 194, 194);
+  max-width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  margin-top: 5px;
+ }
+
+.container-espacioDiv h1{
+font-size: 3.4em;
+font-weight: normal;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#buttonCarousel {
+  font-size: 1.9em;
+  padding: 7px 13px 7px 12px;
+  opacity: 1; 
+  position: relative;
+  z-index: 99;
+  border-radius: 20px;
+  border: none;
+  width: 70px;
+  background-image: none;
+}
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+#cart-items li {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+#cart-items li .subscription-info {
+  text-align: center;
+  
+}
+
+#cart-items li .subscription-title {
+  font-weight: bold;
+}
+
+#cart-items li .subscription-price {
+  font-style: italic;
+}
+
+#cart-items li .remove-btn {
+  color: red;
+  cursor: pointer;
+}
+
+#btnMenu {
+  padding: 5px 5px 5px 5px;
+  margin-right: 8px;
+  margin-left: 2px;
+  opacity: 1; 
+  position: relative;
+  z-index: 99;
+  border: none;
+  background-color:none;
+  width: 25px;
+  background-image: none;
+}
+
+#btnMenu:hover{
+  opacity: 1;
+  transition: opacity 2s ease-in-out; 
+  transform: translateY(-4px); 
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#btnCuenta {
+  font-size: 1.9em;
+  padding: 5px 5px 5px 5px;
+  margin-right: 8px;
+  opacity: 1; 
+  position: relative;
+  z-index: 99;
+  border-radius: 12px;
+  border: none;
+  background-color:none;
+  width: 35px;
+  background-image: none;
+}
+
+#btnCuenta:hover{
+  opacity: 1;
+  transition: opacity 2s ease-in-out; 
+  transform: translateY(-4px); 
+}
+.card-body{
+  justify-content: center;
+  text-align: center;
+}
+.card{
+  border-radius: 20px;
+}
+
+.delete-icon {
+  position: absolute;
+  background-image: url(./img/delete-icon.png);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-size: cover;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+ 
+} 
+.delete-icon:hover{
+    opacity: 1;
+    transition: opacity 2s ease-in-out; 
+    transform: translateY(-4px); 
+}  
+
+#producto {
+  float: left;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(237, 235, 246);
+  width: 100%;
+}  
+#producto div{
+  font-family: sans-serif;
+  margin: 1.72em;
+  width: 100%;
+  padding: 10px;
+}
+ #producto img {
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+ }
+
+ .popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.popup-content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 50px;
+  border-radius: 10px;
+  width: 100%; /* Ajusta el tamaño del pop-up */
+  max-width: 210rem;
+  align-items: center;
+  transform: scale(0.8); /* Ajusta el tamaño inicial del pop-up */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 11;
+  overflow-y: auto;
+ 
+}
+.popup-content h1, h2 {
+text-align: center;
+}
+.popup-content p {
+margin-left: 25px;
+margin-right: 25px;
+}
+
+
+.popup-content img {
+  border-radius: 15px;
+  border: 6px solid #3498db;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 16rem;
+  width: 11.5rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  filter: blur(8px); /* Aplicamos el efecto de desenfoque por defecto */
+  transition: filter 0.3s ease; /* Añadimos una transición suave */
+}
+
+.popup-content img:hover {
+  filter: blur(0); /* Eliminamos el desenfoque al hacer hover */
+}
+
+
+
+.btn-close {
+  display: block;
+  margin: 10px auto 0;
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para el fondo borroso */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+/* Estilo para el fondo borroso */
+.show-popup #producto {
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.popup-title {
+  font-size: 41px;
+  margin-bottom: 10px;
+}
+.popup-text {
+  font-size: 16px;
+  letter-spacing: 0.9px;
+}
